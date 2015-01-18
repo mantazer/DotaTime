@@ -19,6 +19,7 @@ import android.os.Message;
 import android.support.wearable.watchface.CanvasWatchFaceService;
 import android.support.wearable.watchface.WatchFaceStyle;
 import android.text.format.Time;
+import android.view.Gravity;
 import android.view.SurfaceHolder;
 
 import java.util.Random;
@@ -120,6 +121,7 @@ public class WatchFaceService extends CanvasWatchFaceService {
                     .setBackgroundVisibility(WatchFaceStyle
                             .BACKGROUND_VISIBILITY_INTERRUPTIVE)
                     .setShowSystemUiTime(false)
+                    .setStatusBarGravity(Gravity.TOP | Gravity.RIGHT)
                     .build());
 
             resources = WatchFaceService.this.getResources();
